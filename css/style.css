@@ -1,0 +1,744 @@
+@font-face
+{
+    font-family: 'MyWebFont';
+    src: url('../font/Museocyrl500.woff') format('woff');
+    font-style: normal; 
+    font-weight: normal; 
+}
+*{margin: 0; font-family: 'MyWebFont'; cursor: default}
+.d1
+{
+    background-repeat: no-repeat;
+    justify-content: center;
+    background: rgb(34,34,34);
+    height: 1375px; 
+    width: 1600px;
+    background-image: url("photo/triangle1.png");
+    background-repeat: no-repeat;
+}
+#triangle
+{
+    position: absolute;
+    border-bottom: 195px solid rgb(221,230,232); 
+    border-left: 1600px solid transparent;
+    height: 1180px;
+    width: 0px;
+}
+#podd1
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: -1600px;
+}
+header
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header a
+{
+    color: rgb(248,222,1);
+    font-size: 15px;
+}
+.menu
+{
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    height: 100px;
+    width: 1100px;
+}
+.menu img {margin-right: auto}
+.menu div a
+{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.918);
+    font-weight: lighter;
+    font-size: 19px;
+    margin-top: 10px;
+}
+.menu>div:nth-of-type(1), .menu>div:nth-of-type(2), .menu>div:nth-of-type(3)
+{
+    border-right: 1px solid rgb(255,174,0);
+}
+.menu>div {padding: 0px 12px}
+.menu>div>a:hover {cursor: pointer;}
+nav
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.navigation
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 1125px;
+}
+.text
+{
+    display: flex;
+    flex-direction: column;
+}
+.text p:nth-of-type(1), .text p:nth-of-type(2), .text p:nth-of-type(3)
+{
+    color: white;
+    font-size: 60px;
+    width: 460px;
+    margin-top: -20px;
+    font-weight: bolder;
+}
+.text p:nth-of-type(4)
+{
+    color: rgb(199, 199, 199);
+    padding-top: 30px;
+    width: 460px;
+    font-size: 16px;
+}
+.button{
+    background: yellow;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 150px;
+    height: 50px;
+    transform: skew(-35deg);
+}
+.button1
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 148px;
+    height: 48px;
+    background: rgb(34,34,34);
+}
+.button .button1 a
+{
+    text-decoration: none;
+    color: yellowgreen; 
+    cursor: pointer;
+    transform: skew(35deg);
+    font-size: 20px;
+}
+.button1:hover {transform: scale(1.25)}
+nav img
+{
+    display: flex;
+    float: right;
+    margin-left: auto;
+}
+.sidebar input {display: none} 
+#pages
+{
+    text-align: center;
+    margin-top: 90px;
+}
+#pages label
+{ 
+    display: inline-block; 
+    cursor: pointer;
+
+    width: 15px;
+    height: 11px;
+    transform: skew(-34deg);
+    margin-left: 15px;
+    background: rgb(255,174,0);
+    user-select: none;
+} 
+#switch1:checked ~ #pages label:nth-child(1),
+#switch2:checked ~ #pages label:nth-child(2),
+#switch3:checked ~ #pages label:nth-child(3),
+#switch4:checked ~ #pages label:nth-child(4) {background: white}  
+#pages label:hover {background: white;}
+label .checkmark:after {display: none;}
+.sidebar
+{
+    max-width: 1600px;
+}
+#slide 
+{
+    display: flex;
+    flex-direction: row;
+    width: 400%;
+}
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+.cards
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;   
+}
+aside
+{
+    display: flex;
+    color: white;
+    background-image: url(photo/rectangle1.png);
+    width: 520px;
+    height: 265px;
+    margin: 20px;
+}
+aside:nth-of-type(2), aside:nth-of-type(3)
+{
+    background-image: url(photo/rectangle2.png);
+    color: black;
+}
+.paintext
+{  
+    width: 240px;
+    padding: 45px 50px;
+    padding-right: 0;
+}
+#pic1, #pic2, #pic3, #pic4
+{
+    display: flex;
+    width: 255px;
+    height: 265px;
+}
+#pic1 {background-image: url("photo/fitness-class1.png")}
+#pic2 {background-image: url("photo/banner-girl.png")}
+#pic3 {background-image: url("photo/tk-team-member.png")}
+#pic4 {background-image: url("photo/fitness-man1.png")}
+aside .paintext h1 {padding-bottom: 25px; font-size: 25px}
+.paintext>a {padding-bottom: 25px; font-size: 16px; width: 30px;}
+.paintext>div {padding-top: 25px}
+.paintext>div>a {font-size: 20px; font-weight: 900}
+.paintext>div>a:hover {cursor: pointer}
+/*позиция cards при активации переключателя*/
+#switch2:checked ~ #slides #slide {margin-left: -100%;}
+#switch3:checked ~ #slides #slide {margin-left: -200%;}
+#switch4:checked ~ #slides #slide {margin-left: -300%;}
+/*плавные переходы*/
+#slide {transition: all 500ms ease-out;}
+.d2
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 715px; 
+    width: 1600px;
+    background: rgb(221,230,232);
+}
+#Explore
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 42.4px;
+    margin: 40px 0;
+    margin-top: 130px;
+}
+#Per
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 940px;
+    font-size: 16px;
+    margin-bottom: 70px;
+}
+#products
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    width: 1600px;
+}
+.product
+{
+    display: flex;
+    flex-direction: column;
+    background-color: white; 
+    margin: 0 10px;
+}
+.product:hover {transform: scale(1.1)}
+.produc
+{
+    display: flex;
+    width: 320px;
+    height: 250px;
+    margin: 12px 12px 15px 12px;
+    background-color: rgb(221,230,232); 
+}
+.price
+{
+    display: flex;
+    margin: 0 30px;
+    margin-bottom: 15px;
+    font-size: 18px; 
+}
+.dollar
+{
+    display: flex;
+    margin-left: auto;   
+}
+.d3
+{
+    display: flex;
+    background: white;
+    height: 600px; 
+    width: 1600px;
+}
+#triangle2
+{
+    height: 410px;
+    width: 0px;
+    border-top: 190px solid rgb(221,230,232); 
+    border-left: 1600px solid transparent; 
+}
+#podd2
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -1600px;
+    margin-top: -190px;
+}
+#feature1
+{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("photo/banner-error.png");
+    background-repeat: no-repeat;
+    background-position: right; 
+    width: 1090px;
+    height: 600px;
+}
+#feature1 p:first-child
+{
+    font-size: 42px; 
+    width: 370px;  
+    margin-bottom: 50px; 
+    font-weight: 500;
+}
+#feature1 p:nth-of-type(2)
+{
+    width: 500px;
+    font-size: 15px;
+}
+#button2
+{
+    background: black;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 150px;
+    height: 56px;
+    transform: skew(-35deg);
+}
+#button3
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 148px;
+    height: 54px;
+}
+#button3 a
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transform: skew(35deg);
+    font-size: 20px;
+}
+#button3:hover {transform: scale(1.25)}
+.d4
+{
+    display: flex;
+    height: 730px; 
+    width: 1600px;
+    background: rgb(255,174,0);
+}
+#triangle3
+{
+    height: 540px;
+    width: 0px;
+    border-top: 190px solid white; 
+    border-right: 1600px solid transparent; 
+}
+#podd3
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -1500px;
+    margin-top: -90px;
+}
+#feature2
+{  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("photo/sportstar.png");
+    background-repeat: no-repeat;
+    background-position: left; 
+    width: 1140px;
+    height: 580px;
+}
+#feature2 p:first-child
+{
+    color: white; 
+    font-size: 42px; 
+    width: 370px; 
+    margin-bottom: 50px; 
+    font-weight: 500;
+    margin-left: 625px;
+}
+#feature2 p:nth-of-type(2)
+{
+    width: 500px;
+    font-size: 15px;
+    margin-left: 625px;
+}
+#button22
+{
+    background: black;
+    cursor: pointer;
+    width: 150px;
+    height: 56px;
+    transform: skew(-35deg);
+    margin: 50px 0 5% 645px;
+}
+#button32
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 1px;
+    margin-left: 1px;
+    width: 148px;
+    height: 54px;
+    background: rgb(255,174,0);
+}
+#button32 a
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transform: skew(35deg);
+    font-size: 20px;
+}
+#button32:hover {transform: scale(1.25)}
+.d5
+{
+    width: 1600px;
+    background: rgb(34,34,34);   
+}
+#triangle4
+{
+    height: 230px;
+    width: 0px;
+    border-top: 200px solid rgb(255,174,0); 
+    border-left: 1600px solid transparent; 
+}
+#podd4
+{
+    display: flex;
+    align-items: center;
+    margin-left: -1320px;
+    margin-top: -135px;
+    width: 1020px;
+    height: 430px;
+    justify-content: center;
+}
+#podd4 #newsletter
+{  
+    width: 400px;
+    margin-right: auto;
+}
+#newsletter a
+{
+    color: white;
+    font-size: 27px;
+}
+#newsletter a:last-child
+{
+    margin-top: auto;
+    font-weight: 600;
+    color: rgb(248,222,1);
+    font-size: 35px;
+}
+form {display: flex}
+form input
+{
+    text-decoration: none; 
+    cursor: pointer;
+    color: white;
+    transform: skew(35deg); 
+    border: 0px;
+    background-color: rgb(34,34,34);
+    font-size: 20px;
+    width: 100%; 
+}
+#submit input {color: rgb(248,222,1)}
+#email
+{
+    cursor: pointer;
+    border: 1px solid white;
+    font-weight: bold;
+    width: 325px;
+    padding: 12px 30px;
+    color: white;
+    transform: skew(-35deg);
+    background-color: rgb(34,34,34);   
+}
+#submit
+{
+    cursor: pointer;
+    border: 1px solid rgb(248,222,1);
+    font-weight: bold;
+    padding: 12px 30px;
+    text-align: center;
+    margin-left: -6px;
+    transform: skew(-35deg);
+    background-color: rgb(34,34,34);   
+}
+
+input {outline:none}
+#submit:active {border: 1px solid rgb(102, 92, 0)}
+#email:active {border: 1px solid rgb(126, 126, 126)}
+.d6
+{
+    display: flex;
+    background: black;    
+    height: 510px; 
+    width: 1600px;
+}
+#triangle5
+{
+    width: 0px;
+    border-top: 140px solid rgb(34,34,34); 
+    border-right: 1600px solid transparent; 
+}
+#podd5
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: -1600px;
+    margin-top: -140px;
+    height: 510px;
+}
+#prefooter
+{  
+    display: flex;
+    justify-content: center;
+    width: 1070px;
+    height: 230px;
+    margin-top: 100px;
+}
+#sport
+{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    width: 355px;
+    height: 100%;
+    color: white;
+}
+#sport div {margin-top: auto}
+.colum
+{
+    display: flex;
+    justify-content: flex-end;
+    width: 200px;
+    height: 100%;
+}
+.center
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.center div:first-of-type
+{
+    margin-top: 0;
+    margin-bottom: auto;
+}
+.center div .glav {color: white}
+.center div {margin-top: 20px}
+.center div a 
+{
+    color: rgb(160,160,160);
+    text-decoration: none;
+    cursor: pointer;
+}
+footer
+{
+    display: flex;
+    height: 65px; 
+    width: 1600px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgb(17,17,17);  
+    font-family: 'Times New Roman', Times, serif; 
+}
+footer a {color: yellow;}
+
+
+
+
+
+
+
+@media (min-width: 321px) and (max-width: 425px)
+{
+    .d1, .d2, .d3, .d4, .d5, .d6, footer {width: 100%}
+    .navigation, .text {margin-top: 30px; justify-content: center; text-align: center}
+    .text .button {margin-left: auto; margin-right: auto}
+    .cards aside:nth-of-type(3) {order: 2}
+    nav img, .menu img, header>a, #pic1, #pic2, #pic3, #pic4 {display: none}
+    #pages {margin-right: 40px; margin-top: 50px}
+    #triangle {position: absolute}
+
+    .d1 {height: 2270px; background-repeat: initial}
+    .menu {height: 420px; background: rgb(34,34,34); width: 100%; flex-wrap: wrap;}
+    .menu>div
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 70px;
+        margin-top: -1px;
+        border: 1px solid rgb(255,174,0);
+        width: 100%;
+    } 
+    .navigation, .text p {width: 80%}
+    .text p:nth-of-type(1), .text p:nth-of-type(2), .text p:nth-of-type(3) {width: 100%; margin-top: 0}
+    .text p:nth-of-type(4) {width: 100%} 
+
+    .d2 {height: 1500px}
+    #Explore {margin-top: 90px; width: 80%}
+    #Per {width: 80%}
+    #products {flex-direction: column; width: auto}
+    .product {margin-bottom: 20px}
+    aside{width: 100%; height: 265px; margin: 10px}
+
+    .d3, .d4 {height: 480px}
+    #feature1, #feature2 {width: 100%; text-align: center; align-items: center; height: 480px; background-image: none;  justify-content: center}
+    #feature1 p:last-of-type, #feature2 p:last-of-type, #feature1 p:first-of-type, #feature2 p:first-of-type {width: 82%}
+    #feature2 p:first-of-type,  #feature2 p:last-of-type,  #button22 {margin-left: 0}
+    #triangle, #triangle2, #triangle3, #triangle4, #triangle5
+    {
+        width: 100%;
+        height: 100%;  
+        border-top: 0; 
+        border-left: 0; 
+        border-right: 0; 
+        border-bottom: 0;
+    }
+    #podd1, #podd2, #podd3, #podd4, #podd5
+    {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        border-bottom: 0;
+        height: 100%; 
+    }
+    #button22 {margin-bottom: 0;}
+
+    .d5 {height: 310px}
+    #podd4 {width: 100%; flex-direction: column}
+    #podd4 #newsletter {margin-right: 0;text-align: center; width: 100%}
+    form {margin-top: 40px; width: 80%}
+    form input {font-size: 14px;}
+    
+    .d6 {height: 100%}
+    #prefooter {flex-wrap: wrap; height: auto; width: 100%; margin: 0}
+    .colum {margin: 50px 0; justify-content: center;}
+    #sport {margin-right: 0; display: none;}
+    .colum {width: 25%}
+    .center {font-size: 11px}
+    
+    footer {font-size: 12px}
+}
+
+@media (min-width: 426px) and (max-width: 800px)
+{
+    .d1, .d2, .d3, .d4, .d5, .d6, footer {width: 100%}
+    .navigation, .text {margin-top: 50px; justify-content: center; text-align: center}
+    .text .button {margin-left: auto; margin-right: auto}
+    .cards aside:nth-of-type(3) {order: 2}
+    nav img, .menu img, header>a {display: none}
+    #pages {margin-right: 40px; margin-top: 50px}
+
+    .d1 {height: 1900px; background-repeat: initial}
+    .menu {height: 80px; background: rgb(34,34,34); width: 100%;}
+    .menu>div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 80px;
+        margin-top: -1px;
+        border: 1px solid rgb(255,174,0);
+        border-collapse: collapse;
+        width: 100%;
+    }   
+    .navigation, .text p {width: 100%}
+    
+    .d2 {height: 1400px}
+    #Explore {margin-top: 90px;}
+    #Per {width: 500px}
+    #products {flex-direction: column; width: auto}
+    .product {margin-bottom: 20px}
+
+    .d3, .d4 {height: 480px}
+    #feature1, #feature2 {width: 100%; text-align: center; align-items: center; height: 700px; background-image: none;  justify-content: center}
+    #feature2 p:first-of-type,  #feature2 p:last-of-type,  #button22 {margin-left: 0}
+    #triangle, #triangle2, #triangle3, #triangle4, #triangle5
+    {
+        width: 100%;
+        height: 100%;  
+        border-top: 0; 
+        border-left: 0; 
+        border-right: 0; 
+        border-bottom: 0;
+    }
+    #podd1, #podd2, #podd3, #podd4, #podd5
+    {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        border-bottom: 0;
+        height: 100%; 
+    }
+    #button22 {margin-bottom: 0;}
+
+    .d5 {height: 310px}
+    #podd4 {width: 100%; flex-direction: column}
+    #podd4 #newsletter {margin-right: 0}
+    form {margin-top: 40px}
+    
+    .d6 {height: 100%}
+    #prefooter {flex-wrap: wrap; height: auto; width: 100%; margin: 0}
+    .colum {height: 240px; margin: 50px 0; justify-content: center;}
+    #sport {margin-right: 0; display: none;}
+    .colum {width: 25%}
+}

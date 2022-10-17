@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Museo Cyrl';
+    src: local('Museo Cyrl 500'), local('MuseoCyrl-500'), url('Museocyrl500.woff2') format('woff2'), url('Museocyrl500.woff') format('woff'), url('Museocyrl500.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
