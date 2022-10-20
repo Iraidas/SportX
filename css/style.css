@@ -5,6 +5,13 @@
     font-style: normal; 
     font-weight: normal; 
 }
+
+body {
+    overflow-x: hidden;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: rgb(34,34,34);
+}
 *{margin: 0; font-family: 'MyWebFont'; cursor: default}
 .d1
 {
@@ -41,6 +48,7 @@ header a
 {
     color: rgb(248,222,1);
     font-size: 15px;
+    line-height: 3px;
 }
 .menu
 {
@@ -181,6 +189,11 @@ label .checkmark:after {display: none;}
     width: 100%;
     margin-top: 50px;   
 }
+.cardsNav{
+    justify-content: start;
+    margin-left: 200px;
+    width: auto;
+}
 aside
 {
     display: flex;
@@ -216,6 +229,7 @@ aside .paintext h1 {padding-bottom: 25px; font-size: 25px}
 .paintext>div {padding-top: 25px}
 .paintext>div>a {font-size: 20px; font-weight: 900}
 .paintext>div>a:hover {cursor: pointer}
+#slides {width: 100%;}
 /*позиция cards при активации переключателя*/
 #switch2:checked ~ #slides #slide {margin-left: -100%;}
 #switch3:checked ~ #slides #slide {margin-left: -200%;}
@@ -228,7 +242,6 @@ aside .paintext h1 {padding-bottom: 25px; font-size: 25px}
     flex-direction: column;
     align-items: center;
     height: 715px; 
-    width: 1600px;
     background: rgb(221,230,232);
 }
 #Explore
@@ -458,7 +471,7 @@ aside .paintext h1 {padding-bottom: 25px; font-size: 25px}
 {
     display: flex;
     align-items: center;
-    margin-left: -1320px;
+    margin-left: -1370px;
     margin-top: -135px;
     width: 1020px;
     height: 430px;
@@ -539,7 +552,7 @@ input {outline:none}
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: -1600px;
+    margin-right: -1520px;
     margin-top: -140px;
     height: 510px;
 }
@@ -591,7 +604,6 @@ footer
 {
     display: flex;
     height: 65px; 
-    width: 1600px;
     justify-content: center;
     align-items: center;
     color: white;
@@ -606,14 +618,23 @@ footer a {color: yellow;}
 
 
 
-@media (min-width: 321px) and (max-width: 425px)
+@media (min-width: 300px) and (max-width: 425px)
 {
-    .d1, .d2, .d3, .d4, .d5, .d6, footer {width: 100%}
+    .d1, .d2, .d3, .d4, .d5, .d6, footer {width: 100%; justify-content: space-around;}
     .navigation, .text {margin-top: 30px; justify-content: center; text-align: center}
     .text .button {margin-left: auto; margin-right: auto}
     .cards aside:nth-of-type(3) {order: 2}
+    .cardsNav {margin-left: 0px;}
     nav img, .menu img, header>a, #pic1, #pic2, #pic3, #pic4 {display: none}
     #pages {margin-right: 40px; margin-top: 50px}
+    #pages label {background: black}
+    #switch1:checked ~ #pages label:nth-child(1), 
+    #switch2:checked ~ #pages label:nth-child(2), 
+    #switch3:checked ~ #pages label:nth-child(3), 
+    #switch4:checked ~ #pages label:nth-child(4) 
+    {
+        background: white;
+    } 
     #triangle {position: absolute}
 
     .d1 {height: 2270px; background-repeat: initial}
@@ -646,6 +667,7 @@ footer a {color: yellow;}
     #feature2 p:first-of-type,  #feature2 p:last-of-type,  #button22 {margin-left: 0}
     #triangle, #triangle2, #triangle3, #triangle4, #triangle5
     {
+        display: contents;
         width: 100%;
         height: 100%;  
         border-top: 0; 
@@ -687,6 +709,7 @@ footer a {color: yellow;}
     .cards aside:nth-of-type(3) {order: 2}
     nav img, .menu img, header>a {display: none}
     #pages {margin-right: 40px; margin-top: 50px}
+    .cardsNav {margin-left: 0px; justify-content: space-evenly;}
 
     .d1 {height: 1900px; background-repeat: initial}
     .menu {height: 80px; background: rgb(34,34,34); width: 100%;}
@@ -709,11 +732,14 @@ footer a {color: yellow;}
     #products {flex-direction: column; width: auto}
     .product {margin-bottom: 20px}
 
+    header a {line-height: normal}
+
     .d3, .d4 {height: 480px}
     #feature1, #feature2 {width: 100%; text-align: center; align-items: center; height: 700px; background-image: none;  justify-content: center}
     #feature2 p:first-of-type,  #feature2 p:last-of-type,  #button22 {margin-left: 0}
     #triangle, #triangle2, #triangle3, #triangle4, #triangle5
     {
+        position: unset;
         width: 100%;
         height: 100%;  
         border-top: 0; 
