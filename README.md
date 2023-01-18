@@ -1,5 +1,5 @@
-# Landing page with cross-browser layout and adaptive design
+# Кроссбраузерный лендинг с адаптивным дизайном 
 
-### Used technology stack:
+### Используемый стек технологий:
 - HTML
 - CSS
